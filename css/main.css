@@ -1,0 +1,360 @@
+@charset "utf-8";
+@import url('nexon/nexon.css');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+html {
+    font-size: 10px;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'nexon', 'Pacifico', 'cursive', sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+    letter-spacing: -0.0425rem;
+    color: #333;
+}
+
+/* 공통 클래스 */
+.container {
+    position: relative;
+    display: block;
+    width: 130rem;
+    margin: 0 auto;
+
+}
+
+.clearfix::after {
+    content: '';
+    position: relative;
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+/*전체 레이아웃*/
+.wrap {
+    position: relative;
+    display: block;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 7.7rem;
+    display: block;
+    z-index: 999;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.logo {
+    display: block;
+    background: url('../images/logo_1.png') no-repeat;
+    width: 7rem;
+    height: 5rem;
+    background-size: cover;
+}
+
+.gnb {}
+
+.gnb>li {
+    float: left;
+    padding-right: 4rem;
+}
+
+.gnb>li>a {
+    font-size: 1.8rem;
+    color: #000;
+}
+
+.visual {
+    position: relative;
+    display: block;
+    width: 160rem;
+    height: 97rem;
+    padding-left: 15rem;
+    background: url('../images/visual.png') no-repeat;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.visual img {
+    position: absolute;
+    top: 10rem;
+    right: -10rem;
+    display: block;
+    animation: up-down 1s infinite ease-in-out alternate;
+}
+
+@keyframes up-down {
+    from {
+        transform: translate(0rem, 0rem);
+    }
+
+    to {
+        transform: translate(2rem, 2rem);
+    }
+}
+
+.visual-txt {
+    position: absolute;
+    left: 15rem;
+    top: 40rem;
+    display: block;
+    font-size: 15rem;
+    font-family: 'Pacifico', 'cursive', sans-serif;
+}
+
+.whoami {
+    position: relative;
+    display: block;
+    width: 160rem;
+    height: 97rem;
+    background-color: #f9f9f9;
+    margin: 0 auto;
+}
+
+.whoami-tit {
+    display: block;
+    padding-top: 35rem;
+    padding-bottom: 6rem;
+    font-size: 3rem;
+}
+
+.whoami-txt {
+    font-size: 5rem;
+}
+
+.whoami-txt em {
+    font-weight: 600;
+    font-style: normal;
+}
+
+.whoami p {
+    font-size: 2rem;
+    padding-top: 3rem;
+}
+
+.whoami-photo-1 {
+    position: absolute;
+    display: block;
+    width: 60rem;
+    height: 60rem;
+    right: 0;
+    top: 75%;
+    transform: translateY(-50%);
+    background: url('../images/porfile_2.png') no-repeat;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.maple-logo {
+    position: absolute;
+    display: block;
+    left: 50%;
+    bottom: -50%;
+    transform: translateY(-50%);
+}
+
+.maple-logo img {
+    width: 3rem;
+    height: 3rem;
+    animation: up-down 1s infinite ease-in-out alternate;
+}
+
+@keyframes up-down {
+    from {
+        transform: translate(0rem, 1rem);
+    }
+
+    to {
+        transform: translate(0rem, 0rem);
+    }
+}
+
+.whoami2 {
+    position: relative;
+    display: block;
+    width: 160rem;
+    height: 97rem;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.whoami2-list {
+    position: relative;
+    display: block;
+    margin-top: 25rem;
+}
+
+.whoami2-name {
+    position: relative;
+    display: block;
+    font-size: 1.7rem;
+    overflow: hidden;
+    margin-bottom: 4rem;
+}
+
+.whoami2-name-tit {
+    position: relative;
+    display: block;
+    width: 11.5rem;
+    float: left;
+    color: #af3522;
+}
+
+.whoami2-name-txt {
+    position: relative;
+    display: block;
+    float: left;
+    font-family: 'nexon', sans-serif;
+}
+
+.whoami-photo-2 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(50%);
+    display: block;
+    background: url('../images/porfile_3.png') no-repeat;
+    width: 60rem;
+    height: 50rem;
+    background-size: cover;
+}
+
+.maple-logo-2 {
+    position: absolute;
+    display: block;
+    left: -20%;
+    bottom: -15%;
+}
+
+.maple-logo-2 img {
+    width: 3rem;
+    height: 3rem;
+    animation: up-down 1s infinite ease-in-out alternate;
+}
+
+@keyframes up-down {
+    from {
+        transform: translate(0rem, 1rem);
+    }
+
+    to {
+        transform: translate(0rem, 0rem);
+    }
+}
+
+.possib {
+    position: relative;
+    display: block;
+    width: 160rem;
+    height: 97rem;
+    background-color: #f9f9f9;
+    margin: 0 auto;
+}
+
+.possib-tit {
+    position: relative;
+    display: block;
+}
+
+.possib-tit img {
+    padding-top: 10rem;
+}
+
+.possib-list {
+    position: relative;
+    display: block;
+    margin: 9rem 0;
+}
+
+.possib-list span {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #333
+}
+
+.possib-list p {
+    font-size: 1.5rem;
+}
+
+.graph {
+    position: absolute;
+    right: 0;
+    top: 30%;
+    display: block;
+    background: url('../images/graphbar.png') no-repeat;
+}
+
+.graph img {
+}
+
+.maple-logo-3 {
+    position: absolute;
+    left: 50%;
+    bottom: -12.5%;
+    display: block;
+}
+
+.maple-logo-3 img {
+    width: 3rem;
+    height: 3rem;
+    animation: up-down 1s infinite ease-in-out alternate;
+}
+
+@keyframes up-down {
+    from {
+        transform: translate(0rem, 1rem);
+    }
+
+    to {
+        transform: translate(0rem, 0rem);
+    }
+}
+
+.skills {
+    position: relative;
+    display: block;
+    width: 160rem;
+    height: 97rem;
+    background-color: #fff;
+    margin: 0 auto;
+}
