@@ -185,8 +185,7 @@ body {
     background-size: cover;
 }
 
-.maple-logo {
-}
+.maple-logo {}
 
 .maple-logo img {
     position: absolute;
@@ -380,31 +379,199 @@ body {
     position: relative;
     display: block;
     width: 160rem;
-    height: 170rem;
+    height: 65rem;
     margin: 0 auto;
 }
 
-.works .container {
-    padding: 12rem 0;
+.works .container {}
+
+.works-tit {
+    padding-top: 10rem;
 }
 
 .work-box {
     position: relative;
     display: block;
-    width: 38rem;
-    height: 125rem;
-    background-color: #f9f9f9;
-    margin-top: 15rem;
+    width: 39rem;
+    height: 63.5rem;
+    margin-top: 12rem;
+    background: url('../images/works-bg.png') no-repeat;
 }
 
-.work-bar {
+.publ-tit {
+    position: absolute;
+    left: 7rem;
+    top: 10rem;
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.publ-tit-2 {
+    position: absolute;
+    left: 7rem;
+    top: 15rem;
+    display: block;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.sw-works {
+    position: relative;
+    display: block;
+    width: 130rem;
+    height: 100%;
+}
+
+.sw-works-control {
+    position: absolute;
+    right: 4.5rem;
+    bottom: 30%;
+    display: block;
+    width: 8rem;
+    height: 2rem;
+    font-size: 2rem;
+    z-index: 9;
+}
+
+.sw-works-prev {
+    content: '';
+    position: absolute;
+    right: 9rem;
+    bottom: 36%;
+    transform: translateY(-50%);
+    display: block;
+    width: 0.8rem;
+    height: 1.8rem;
+    background: url('../images/works_prev.png') no-repeat;
+    cursor: pointer;
+}
+
+.swiper-pagination-current {
+    font-weight: 600;
+}
+
+.sw-works-next {
+    content: '';
+    position: absolute;
+    right: -1.7rem;
+    bottom: 36%;
+    transform: translateY(-50%);
+    display: block;
+    width: 0.8rem;
+    height: 1.8rem;
+    background: url('../images/works_next.png') no-repeat;
+    cursor: pointer;
+}
+
+.works-txt {
+    display: block;
+    padding-left: 7rem;
+    padding-top: 22.5rem;
+}
+
+.works-txt>li {
+    overflow: hidden;
+    float: left;
+}
+
+.works-txt>li:first-child {
+    font-weight: 600;
+}
+
+.works-txt>li>p {
+    font-size: 1.5rem;
+    margin-right: 3rem;
+    margin-top: 6rem;
+}
+
+.work-img img {
+    position: absolute;
+    left: 35rem;
+    top: 2rem;
+    display: block;
+    width: 78rem;
+    height: 56rem;
+}
+
+.work-bt {
+    position: absolute;
+    right: 0;
+    top: 40%;
+    transform: translateY(-50%);
+    display: block;
+}
+
+.work-bt>li {
+    display: block;
+    margin-top: 3rem;
+}
+
+.etc {
+    position: relative;
+    display: block;
+    width: 160rem;
+    height: 110rem;
+    margin: 0 auto;
+    padding-top: 6rem;
+}
+
+.etc .container {
+    padding: 5rem 0;
+}
+
+.etc-tit {
     position: relative;
     display: block;
 }
 
-.work-bar img {
-    position: absolute;
-    left: 3.5rem;
-    top: 10rem;
+.etc-tit img {}
+
+.etc-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 4rem;
+}
+
+.etc-cont {
+    position: relative;
     display: block;
+    width: 37rem;
+    margin-top: 9.5rem;
+}
+
+.etc-txt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 25%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #f9f9f9;
+    font-size: 2rem;
+    line-height: 4;
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.etc-txt:hover {
+    opacity: 1;
+
+}
+
+.life {
+    position: relative;
+    display: block;
+    width: 160rem;
+    height: 130rem;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+}
+
+.life .container {
+    padding: 12rem 0;
 }
