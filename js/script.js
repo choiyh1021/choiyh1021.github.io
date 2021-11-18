@@ -100,7 +100,7 @@ $(document).ready(function () {
             HTML.animate(0.84); // Number from 0.0 to 1.0
             photoshop.animate(0.85); // Number from 0.0 to 1.0    
             Illustrator.animate(0.75); // Number from 0.0 to 1.0
-        }else {
+        } else {
             JavaScript.animate(0); // Number from 0.0 to 1.0
             jQuery.animate(0); // Number from 0.0 to 1.0
             CSS.animate(0); // Number from 0.0 to 1.0
@@ -109,6 +109,23 @@ $(document).ready(function () {
             Illustrator.animate(0); // Number from 0.0 to 1.0
         }
 
+    });
+
+    let sw_works = new Swiper('.sw-works', {
+        loop: true,
+        // autoplay: {
+        //     delay: 0,
+        //     disableOnInteraction: false,
+        // },
+
+        navigation: {
+            nextEl: ".sw-works-next",
+            prevEl: ".sw-works-prev",
+        },
+        pagination: {
+            el: ".sw-works-pg",
+            type: "fraction",
+        },
     });
 
 });
