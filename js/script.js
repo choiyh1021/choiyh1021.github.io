@@ -138,10 +138,10 @@ $(document).ready(function () {
         if (sc_y >= 3200) {
             JavaScript.animate(0.55); // Number from 0.0 to 1.0
             jQuery.animate(0.6); // Number from 0.0 to 1.0
-            CSS.animate(0.86); // Number from 0.0 to 1.0
-            HTML.animate(0.84); // Number from 0.0 to 1.0
-            photoshop.animate(0.85); // Number from 0.0 to 1.0    
-            Illustrator.animate(0.75); // Number from 0.0 to 1.0
+            CSS.animate(0.78); // Number from 0.0 to 1.0
+            HTML.animate(0.76); // Number from 0.0 to 1.0
+            photoshop.animate(0.75); // Number from 0.0 to 1.0    
+            Illustrator.animate(0.70); // Number from 0.0 to 1.0
         } else {
             JavaScript.animate(0); // Number from 0.0 to 1.0
             jQuery.animate(0); // Number from 0.0 to 1.0
