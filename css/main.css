@@ -66,15 +66,24 @@ body {
     display: block;
 }
 
+/* 상단 */
+
 .header {
     position: fixed;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     width: 100%;
     height: 7.7rem;
     display: block;
+    margin: 0 auto;
     z-index: 999;
+    background-color: rgba(255, 255, 255, 0);
+    transition: all 0.2s;
+}
+
+.header-active {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 7px 0px rgb(0 0 0 / 20%)
 }
 
 .header .container {
@@ -92,17 +101,58 @@ body {
     background-size: cover;
 }
 
-.gnb {}
+.gnb {
+    width: 66.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .gnb>li {
     float: left;
-    padding-right: 4rem;
+    overflow: hidden;
 }
 
 .gnb>li>a {
+    position: relative;
     font-size: 1.8rem;
     color: #000;
 }
+
+.gnb>li>a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #ff6780;
+    z-index: 99;
+    transition: all 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.gnb>li>a:hover::before {
+    left: 100%;
+}
+
+.gnb>li>a::after {
+    content: '';
+    position: absolute;
+    bottom: -0.3rem;
+    margin-top: -0.2rem;
+    left: 100%;
+    width: 100%;
+    height: 0.2rem;
+    background: #ff6780;
+    transition: all 0.3s;
+    transition-delay: 0.4s;
+}
+
+.gnb>li>a:hover::after {
+    left: 0%;
+}
+
+/* 비주얼 */
 
 .visual {
     position: relative;
@@ -142,6 +192,8 @@ body {
     font-family: 'Pacifico', 'cursive', sans-serif;
 }
 
+/* about me */
+
 .whoami {
     position: relative;
     display: block;
@@ -178,8 +230,7 @@ body {
     width: 60rem;
     height: 60rem;
     right: 0;
-    top: 75%;
-    transform: translateY(-50%);
+    top: 20rem;
     background: url('../images/porfile_2.png') no-repeat;
     overflow: hidden;
     background-size: cover;
@@ -207,6 +258,7 @@ body {
     }
 }
 
+/* 개인정보 */
 .whoami2 {
     position: relative;
     display: block;
@@ -247,14 +299,15 @@ body {
 .whoami-photo-2 {
     position: absolute;
     left: 0;
-    top: 10%;
-    transform: translateY(30%);
+    top: 18.5rem;
     display: block;
     background: url('../images/porfile_3.png') no-repeat center;
     width: 60rem;
     height: 60rem;
     background-size: cover;
 }
+
+/* 적성 */
 
 .possib {
     position: relative;
@@ -313,12 +366,14 @@ body {
     height: 55rem;
 }
 
+/* 스킬 */
+
 .skills {
     position: relative;
     display: block;
     width: 160rem;
-    height: 97rem;
     margin: 0 auto;
+    padding: 4em 0;
 }
 
 .skills .container {
@@ -375,26 +430,21 @@ body {
     height: 2rem;
 }
 
+/* 퍼블리싱 */
+
 .works {
     position: relative;
     display: block;
     width: 160rem;
-    height: 65rem;
     margin: 0 auto;
 }
 
-.works .container {}
-
-.works-tit {
-    padding-top: 10rem;
-}
-
-.work-box {
+.work-box-1 {
     position: relative;
     display: block;
     width: 39rem;
-    height: 63.5rem;
-    margin-top: 12rem;
+    height: 63rem;
+    margin-top: 10rem;
     background: url('../images/works-bg.png') no-repeat;
 }
 
@@ -405,6 +455,7 @@ body {
     display: block;
     font-size: 2rem;
     font-weight: 600;
+    z-index: 9;
 }
 
 .publ-tit-2 {
@@ -414,6 +465,7 @@ body {
     display: block;
     font-size: 4rem;
     font-weight: 600;
+    z-index: 9;
 }
 
 .sw-works {
@@ -421,6 +473,11 @@ body {
     display: block;
     width: 130rem;
     height: 100%;
+}
+
+.swiper-slide{    
+    width: 130rem;
+    background: url('../images/sw-works-bg.png') no-repeat;
 }
 
 .sw-works-control {
@@ -507,6 +564,18 @@ body {
     margin-top: 3rem;
 }
 
+/* 리디자인 */
+
+.work-box-2 {
+    position: relative;
+    display: block;
+    width: 39rem;
+    height: 63rem;
+    background: url('../images/works-bg.png') no-repeat;
+}
+
+/* etc */
+
 .etc {
     position: relative;
     display: block;
@@ -560,18 +629,78 @@ body {
 
 .etc-txt:hover {
     opacity: 1;
-
 }
+
+/* life */
 
 .life {
     position: relative;
     display: block;
     width: 160rem;
-    height: 130rem;
     margin: 0 auto;
     background-color: #f9f9f9;
 }
 
 .life .container {
-    padding: 12rem 0;
+    padding: 8rem 0;
+}
+
+.life-tit {
+    padding-bottom: 10rem;
+}
+
+.life-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.life-box img {
+    width: 65rem;
+    height: 41.5rem;
+}
+
+.life-txt {
+    width: 65rem;
+    height: 41.5rem;
+    padding: 10rem;
+}
+
+.life-txt>p {
+    font-size: 1.6rem;
+}
+
+/* 하단 */
+.footer {
+    position: relative;
+    width: 160rem;
+    height: 70rem;
+    background: url('../images/contact-bg.png') no-repeat;
+    margin: 0 auto;
+}
+
+.qrcord {
+    position: relative;
+    display: block;
+}
+
+.qrcord img {
+    position: absolute;
+    left: 35rem;
+    top: 29rem;
+    display: block;
+    width: 23rem;
+    height: 23rem;
+    background-size: cover;
+}
+
+.qr-txt {
+    position: relative;
+    display: block;
+}
+
+.qr-tit {
+    position: absolute;
+    right: 30rem;
 }

@@ -1,4 +1,46 @@
+window.onload = function () {
+    AOS.init();
+}
+
 $(document).ready(function () {
+
+    //주메뉴
+    let header = $('.header');
+
+    $(window).scroll(function () {
+        let scroll_bar = $(window).scrollTop();
+        if (scroll_bar > 0) {
+            header.addClass('header-active')
+        } else {
+            header.removeClass('header-active')
+        };
+    });
+
+    // 부드럽게 위치 이동하는 코드
+    var moveEl = $('.move');
+    // 클릭시 해당위치로 부드럽게 이동한다.
+    $.each(moveEl, function () {
+
+        $(this).click(function (e) {
+            // href 를 일단 막아서 위치이동 못하게함.
+            e.preventDefault();
+            // 가야하는 곳의 위치를 파악한다.
+            var tg = $(this).attr('href');
+            var num;
+            // 혹시 #아이디 가 없다면
+            if (tg == '#') {
+                num = 0;
+            } else {
+                // 어느 만큼 이동해야 하는 지를 숫자로 파악한다.
+                num = $(tg).offset().top;
+            }
+            // 움직이자
+            $('html, body').stop().animate({
+                scrollTop: num
+            }, 500);
+        });
+    });
+
     var photoshop = new ProgressBar.Line('#photoshop-level', {
         strokeWidth: 4,
         easing: 'easeInOut',
@@ -113,11 +155,11 @@ $(document).ready(function () {
 
     let sw_works = new Swiper('.sw-works', {
         loop: true,
-        // autoplay: {
-        //     delay: 0,
-        //     disableOnInteraction: false,
-        // },
-
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        effect: "fade",
         navigation: {
             nextEl: ".sw-works-next",
             prevEl: ".sw-works-prev",
