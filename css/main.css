@@ -676,7 +676,8 @@ body {
     position: relative;
     width: 160rem;
     height: 70rem;
-    background: url('../images/contact-bg.png') no-repeat;
+    /* background: url('../images/contact-bg.png') no-repeat; */
+    background-color: #f9f9f9;
     margin: 0 auto;
 }
 
@@ -702,5 +703,40 @@ body {
 
 .qr-tit {
     position: absolute;
-    right: 30rem;
+    left: 72rem;
+    top: 23rem;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.qr-txt p {
+    position: absolute;
+    left: 72rem;
+    top: 30rem;
+    font-size: 1.5rem;
+    line-height: 4rem;
+}
+
+.qr-txt-2 {
+    position: absolute;
+    left: 72rem;
+    top: 44rem;
+    font-size: 1.5rem;
+}
+
+.qr-txt-2 b {
+    font-size: 2rem;
+}
+
+.footer-box {
+    position: absolute;
+    left: 72rem;
+    top: 50rem;
+    display: block;
+}
+
+.footer-box li {
+    display: block;
+    float: left;
+    padding-right: 3rem;
 }
