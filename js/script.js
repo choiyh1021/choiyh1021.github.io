@@ -3,6 +3,45 @@ window.onload = function () {
 }
 
 $(document).ready(function () {
+         // 모달창 기능
+
+    // 1 : .modal을 찾아서 웹브라우저에 보관한다.
+    let modal = $('.modal');
+
+    // 2 : .modal-cont를 찾아서 웹브라우저에 보관한다.
+    let modal_cont = $('.modal-cont');
+
+    // 3 : .modal-close를 찾아서 웹브라우저에 보관한다.
+    let modal_close = $('.modal-close');
+
+    // 3-1 : .modal-show를 찾아서 웹브라우저에 보관한다.
+    let modal_show = $('.modal-show');
+
+    // 4 : .modal을 display:none 안 보여요.
+    // modal.fadeIn();
+
+    // 5 : .modal_close를 마우스로 클릭하면 사라진다.
+    modal_close.click(function () {
+        modal.fadeOut();
+    });
+
+    // 6 : .modal을 마우스로 클릭하면 사라진다.
+    modal.click(function () {
+        modal.fadeOut();
+    });
+
+    // 7 : .modal-cont를 마우스로 클릭하면 그냥 있어라.
+    modal_cont.click(function (e) {
+        e.stopPropagation();
+    });
+
+    // 8 : .modal=show를 마우스로 클릭하면 보인다.
+    // 8-1 : 아주 중요합니다. a 태그라면 주의합니다!!!
+    modal_show.click(function (e) {
+        // href를 막아야 합니다.
+        e.preventDefault();
+        modal.fadeIn();
+    });
 
     //주메뉴
     let header = $('.header');
@@ -156,7 +195,7 @@ $(document).ready(function () {
     let sw_works = new Swiper('.sw-works', {
         loop: true,
         autoplay: {
-            delay: 3000,
+            delay: 3500,
             disableOnInteraction: false,
         },
         effect: "fade",

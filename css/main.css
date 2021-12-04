@@ -41,7 +41,6 @@ body {
     display: block;
     width: 130rem;
     margin: 0 auto;
-
 }
 
 .clearfix::after {
@@ -84,6 +83,48 @@ body {
 /* 스크롤바 색 */
 ::-webkit-scrollbar-button {
     display: none;
+}
+
+/* 모달창 */
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+}
+
+.modal-cont {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 1rem;
+    width: 55rem;
+    height: 40rem;
+    background-color: #fff;
+}
+
+.modal-cont p {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20rem;
+    font-size: 2.5rem;
+}
+
+.modal-close {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    border: 0;
+    background-color: #fff;
+    color: #af3522;
+    font-size: 2.5rem;
+    cursor: pointer;
 }
 
 /* 상단 */
@@ -172,7 +213,6 @@ body {
 }
 
 /* 비주얼 */
-
 .visual {
     position: relative;
     display: block;
@@ -212,7 +252,6 @@ body {
 }
 
 /* about me */
-
 .whoami {
     position: relative;
     display: block;
@@ -328,7 +367,6 @@ body {
 }
 
 /* 적성 */
-
 .possib {
     position: relative;
     display: block;
@@ -387,7 +425,6 @@ body {
 }
 
 /* 스킬 */
-
 .skills {
     position: relative;
     display: block;
@@ -451,7 +488,6 @@ body {
 }
 
 /* 퍼블리싱 */
-
 .works {
     position: relative;
     display: block;
